@@ -1,6 +1,15 @@
 ENABLE_HDMI_FORCE_HOTPLUG = "1"
 
 MACHINE = "raspberrypi4-64-rdk-mc"
+TARGET_VENDOR = "-rdk"
+KERNEL_IMAGETYPE= "Image"
+
+# To enable serial console
+ENABLE_UART = "1"
+
+# This is needed for tmp directory to be named as tmp instead of tmp-glibc
+TCLIBCAPPEND = ""
+
 # Enabling this causes issue from glibc. Refer RDKCentral jira RDKE-13
 #MACHINEOVERRIDES .= ":arm"
 
