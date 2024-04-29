@@ -5,3 +5,4 @@
 #
 
 PREFERRED_PROVIDER_virtual/kernel = "android-raspberrypi"
+PREFERRED_PROVIDER_virtual/vendor-westeros-drm = "westeros-soc-drm"
