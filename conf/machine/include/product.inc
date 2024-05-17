@@ -1,6 +1,6 @@
 ENABLE_HDMI_FORCE_HOTPLUG = "1"
 
-MACHINE = "raspberrypi4-64-rdk-mc"
+MACHINE = "raspberrypi4-64-rdke"
 TARGET_VENDOR = "-rdk"
 KERNEL_IMAGETYPE= "Image"
 
