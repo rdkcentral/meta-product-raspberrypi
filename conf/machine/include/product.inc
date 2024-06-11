@@ -31,3 +31,6 @@ VIRTUAL-RUNTIME_init_manager = "systemd"
 VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
 # This distro is used in westeros recipes
 DISTRO_FEATURES_append = " rdkshell"
+
+# Middleware layer requirements.
+DOBBY_DEVICESETTINGS_FILE = "dobby.generic.json"
