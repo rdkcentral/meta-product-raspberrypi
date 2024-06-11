@@ -35,6 +35,6 @@ DISTRO_FEATURES_append = " rdkshell"
 # Platform does not have SVP support
 DISTRO_FEATURES_remove = " rdk_svp"
 
-## Move to generic are in middleware when it is ready.
+## Move to common middleware configuration when its ready. Refer Comcast Jira: RDK-50625
 # To remove SecAPI dependency.
 DISTRO_FEATURES_append = " enable_icrypto_openssl"
