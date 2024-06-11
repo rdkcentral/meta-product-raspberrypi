@@ -31,3 +31,10 @@ VIRTUAL-RUNTIME_init_manager = "systemd"
 VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
 # This distro is used in westeros recipes
 DISTRO_FEATURES_append = " rdkshell"
+
+# Platform does not have SVP support
+DISTRO_FEATURES_remove = " rdk_svp"
+
+## Move to generic are in middleware when it is ready.
+# To remove SecAPI dependency.
+DISTRO_FEATURES_append = " enable_icrypto_openssl"
