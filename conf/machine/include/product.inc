@@ -40,4 +40,7 @@ DISTRO_FEATURES_remove = " rdk_svp"
 
 ## Move to common middleware configuration when its ready. Refer Comcast Jira: RDK-50625
 # To remove SecAPI dependency.
-DISTRO_FEATURES_append = " enable_icrypto_openssl"
+DISTRO_FEATURES_append = " enable_icrypto_openssl open-middleware"
+
+# To remove rdkfwupgrade package dependency
+DISTRO_FEATURES_remove = "enable_maintenance_manager ctrlm"
