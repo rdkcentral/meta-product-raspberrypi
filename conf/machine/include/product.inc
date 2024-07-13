@@ -34,6 +34,7 @@ DISTRO_FEATURES_append = " rdkshell"
 
 # Middleware layer requirements.
 DOBBY_DEVICESETTINGS_FILE = "dobby.generic.json"
+PREFERRED_PROVIDER_virtual/default-font ?= "liberation-fonts"
 
 # Platform does not have SVP support
 DISTRO_FEATURES_remove = " rdk_svp"
@@ -44,3 +45,4 @@ DISTRO_FEATURES_append = " enable_icrypto_openssl open-middleware"
 
 # To remove rdkfwupgrade package dependency
 DISTRO_FEATURES_remove = "enable_maintenance_manager ctrlm"
+
