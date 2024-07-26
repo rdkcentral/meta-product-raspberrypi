@@ -18,5 +18,3 @@ PREFERRED_PROVIDER_virtual/libgbm = "${@bb.utils.contains("MACHINE_FEATURES", "v
 PREFERRED_PROVIDER_virtual/vendor-devicesettings-hal = "devicesettings-hal-raspberrypi4"
 PREFERRED_PROVIDER_virtual/vendor-iarmmgrs-hal = "iarmmgrs-hal-raspberrypi4"
 PREFERRED_PROVIDER_virtual/mfrlib = "mfrlibs-hal-raspberrypi4"
-
-PREFERRED_PROVIDER_virtual/vendor-media-utils = "media-utils"
