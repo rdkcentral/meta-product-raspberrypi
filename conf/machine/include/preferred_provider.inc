@@ -6,7 +6,7 @@
 
 PREFERRED_PROVIDER_virtual/kernel = "android-raspberrypi"
 PREFERRED_PROVIDER_virtual/vendor-westeros-drm = "westeros-soc-drm"
-PREFERRED_PROVIDER_virtual/vendor-westeros-soc = "westeros-soc"
+PREFERRED_PROVIDER_virtual/vendor-westeros-soc = "westeros-soc-drm"
 PREFERRED_PROVIDER_virtual/vendor-westeros-sink = "westeros-sink"
 
 PREFERRED_PROVIDER_virtual/egl = "${@bb.utils.contains("MACHINE_FEATURES", "vc4graphics", "mesa", "userland", d)}"
@@ -18,5 +18,5 @@ PREFERRED_PROVIDER_virtual/libgbm = "${@bb.utils.contains("MACHINE_FEATURES", "v
 PREFERRED_PROVIDER_virtual/vendor-devicesettings-hal = "devicesettings-hal-raspberrypi4"
 PREFERRED_PROVIDER_virtual/vendor-iarmmgrs-hal = "iarmmgrs-hal-raspberrypi4"
 PREFERRED_PROVIDER_virtual/mfrlib = "mfrlibs-hal-raspberrypi4"
-
+PREFERRED_PROVIDER_virtual/vendor-hdmicec-hal = "hdmicec-hal-raspberrypi4"
 PREFERRED_PROVIDER_virtual/iarmmgrs-hal = "iarmmgrs-hal-raspberrypi4"
