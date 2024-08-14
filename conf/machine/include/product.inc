@@ -45,6 +45,6 @@ DISTRO_FEATURES_append = " enable_icrypto_openssl open-middleware"
 # To remove rdkfwupgrade package dependency
 DISTRO_FEATURES_remove = "enable_maintenance_manager ctrlm"
 
-# Temporarily remove the SECUIRTY_CFLAGS -fstackprotector and fortify source 
+# RDK-52444: Temporarily remove the SECUIRTY_CFLAGS -fstackprotector and fortify source 
 SECURITY_CFLAGS_remove = " -fstack-protector -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Wno-error=format-security -Wno-error=unused-result"
 SECURITY_LDFLAGS_remove = " -fstack-protector"
