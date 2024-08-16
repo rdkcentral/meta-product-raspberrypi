@@ -6,7 +6,7 @@
 
 PREFERRED_PROVIDER_virtual/kernel = "android-raspberrypi"
 PREFERRED_PROVIDER_virtual/vendor-westeros-drm = "westeros-soc-drm"
-PREFERRED_PROVIDER_virtual/vendor-westeros-soc = "westeros-soc"
+PREFERRED_PROVIDER_virtual/vendor-westeros-soc = "westeros-soc-drm"
 PREFERRED_PROVIDER_virtual/vendor-westeros-sink = "westeros-sink"
 
 PREFERRED_PROVIDER_virtual/egl = "${@bb.utils.contains("MACHINE_FEATURES", "vc4graphics", "mesa", "userland", d)}"
