@@ -15,36 +15,36 @@ TCLIBCAPPEND = ""
 
 # This override is needed for systemd 2.30 patches to get applied. Refer RDKCentral jira RDKE-12
 MACHINEOVERRIDES .= ":kirkstone"
-DISTRO_FEATURES_append = " kirkstone"
+DISTRO_FEATURES:append = " kirkstone"
 
 require conf/multilib.conf
 MULTILIBS = "multilib:lib32"
-DEFAULTTUNE_virtclass-multilib-lib32 = "armv7athf-neon-vfpv4"
+DEFAULTTUNE:virtclass-multilib-lib32 = "armv7athf-neon-vfpv4"
 
 # Enable Syslog-ng
-DISTRO_FEATURES_append = " syslog-ng"
+DISTRO_FEATURES:append = " syslog-ng"
 
 # Enabling this to solve syslog-ng packaging issue. Refer RDKCentral jira RDKE-14
-DISTRO_FEATURES_append = " systemd"
+DISTRO_FEATURES:append = " systemd"
 DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
 VIRTUAL-RUNTIME_init_manager = "systemd"
 VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
 # This distro is used in westeros recipes
-DISTRO_FEATURES_append = " rdkshell"
+DISTRO_FEATURES:append = " rdkshell"
 
 # Middleware layer requirements.
 DOBBY_DEVICESETTINGS_FILE = "dobby.generic.json"
 
 # Platform does not have SVP support
-DISTRO_FEATURES_remove = " rdk_svp"
+DISTRO_FEATURES:remove = " rdk_svp"
 
 ## Move to common middleware configuration when its ready. Refer Comcast Jira: RDK-50625
 # To remove SecAPI dependency.
-DISTRO_FEATURES_append = " enable_icrypto_openssl open-middleware"
+DISTRO_FEATURES:append = " enable_icrypto_openssl open-middleware"
 
 # To remove rdkfwupgrade package dependency
-DISTRO_FEATURES_remove = "enable_maintenance_manager ctrlm"
+DISTRO_FEATURES:remove = "enable_maintenance_manager ctrlm"
 
 # RDK-52444: Temporarily remove the SECUIRTY_CFLAGS -fstackprotector and fortify source 
-SECURITY_CFLAGS_remove = " -fstack-protector -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Wno-error=format-security -Wno-error=unused-result"
-SECURITY_LDFLAGS_remove = " -fstack-protector"
+SECURITY_CFLAGS:remove = " -fstack-protector -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Wno-error=format-security -Wno-error=unused-result"
+SECURITY_LDFLAGS:remove = " -fstack-protector"
