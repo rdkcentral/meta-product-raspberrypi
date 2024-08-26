@@ -14,8 +14,8 @@ TCLIBCAPPEND = ""
 #MACHINEOVERRIDES .= ":arm"
 
 # This override is needed for systemd 2.30 patches to get applied. Refer RDKCentral jira RDKE-12
-MACHINEOVERRIDES .= ":dunfell"
-DISTRO_FEATURES_append = " dunfell"
+MACHINEOVERRIDES .= ":kirkstone"
+DISTRO_FEATURES_append = " kirkstone"
 
 require conf/multilib.conf
 MULTILIBS = "multilib:lib32"
