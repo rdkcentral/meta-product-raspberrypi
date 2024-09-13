@@ -17,11 +17,13 @@ PREFERRED_PROVIDER_virtual/libgbm = "${@bb.utils.contains("MACHINE_FEATURES", "v
 
 PREFERRED_PROVIDER_virtual/vendor-devicesettings-hal = "devicesettings-hal-raspberrypi4"
 PREFERRED_PROVIDER_virtual/vendor-iarmmgrs-hal = "iarmmgrs-hal-raspberrypi4"
+PREFERRED_PROVIDER_virtual/vendor-pwrmgr-hal = "iarmmgrs-hal-raspberrypi4"
+PREFERRED_PROVIDER_virtual/vendor-deepsleepmgr-hal = "iarmmgrs-hal-raspberrypi4"
 PREFERRED_PROVIDER_virtual/mfrlib = "mfrlibs-hal-raspberrypi4"
+PREFERRED_PROVIDER_virtual/vendor-hdmicec-hal = "hdmicec-hal-raspberrypi4"
 
 #Temp add media-utils as provider for vendor-media-utils, to be re-worked if hal changes are required.
 PREFERRED_PROVIDER_virtual/vendor-media-utils = "media-utils"
-PREFERRED_PROVIDER_virtual/vendor-hdmicec-hal = "hdmicec-hal-raspberrypi4"
 PREFERRED_PROVIDER_virtual/vendor-audio-service = "noop"
 PREFERRED_PROVIDER_virtual/vendor-gst-drm-plugins = "noop"
 PREFERRED_PROVIDER_virtual/vendor-secapi2-adapter = "noop"
