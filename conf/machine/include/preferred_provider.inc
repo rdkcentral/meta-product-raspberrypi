@@ -27,5 +27,4 @@ PREFERRED_PROVIDER_virtual/vendor-media-utils = "media-utils"
 PREFERRED_PROVIDER_virtual/vendor-audio-service = "noop"
 PREFERRED_PROVIDER_virtual/vendor-gst-drm-plugins = "noop"
 PREFERRED_PROVIDER_virtual/vendor-secapi2-adapter = "noop"
-
 PREFERRED_PROVIDER_virtual/vendor-systemaudioplatform = "systemaudioplatform"
