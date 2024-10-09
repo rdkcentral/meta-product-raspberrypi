@@ -24,7 +24,7 @@ PREFERRED_PROVIDER_virtual/vendor-hdmicec-hal = "hdmicec-hal-raspberrypi4"
 
 #Temp add media-utils as provider for vendor-media-utils, to be re-worked if hal changes are required.
 PREFERRED_PROVIDER_virtual/vendor-media-utils = "media-utils"
-PREFERRED_PROVIDER_virtual/vendor-audio-service = "noop"
-PREFERRED_PROVIDER_virtual/vendor-gst-drm-plugins = "noop"
-PREFERRED_PROVIDER_virtual/vendor-secapi2-adapter = "noop"
+PREFERRED_PROVIDER_virtual/vendor-audio-service = "audio-service-rpi"
+PREFERRED_PROVIDER_virtual/vendor-gst-drm-plugins = "gst-drm-plugins-rpi"
+PREFERRED_PROVIDER_virtual/vendor-secapi2-adapter = "secapi2-adapter-rpi"
 PREFERRED_PROVIDER_virtual/vendor-systemaudioplatform = "systemaudioplatform"
