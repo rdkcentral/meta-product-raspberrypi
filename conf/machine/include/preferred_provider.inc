@@ -21,6 +21,7 @@ PREFERRED_PROVIDER_virtual/vendor-pwrmgr-hal = "pwrmgr-hal-raspberrypi4"
 PREFERRED_PROVIDER_virtual/vendor-deepsleepmgr-hal = "deepsleepmgr-hal-raspberrypi4"
 PREFERRED_PROVIDER_virtual/mfrlib = "mfrlibs-hal-raspberrypi4"
 PREFERRED_PROVIDER_virtual/vendor-hdmicec-hal = "hdmicec-hal-raspberrypi4"
+PREFERRED_PROVIDER_virtual/vendor-tvsettings-hal = "tvsettings-hal-noop"
 
 #Temp add media-utils as provider for vendor-media-utils, to be re-worked if hal changes are required.
 PREFERRED_PROVIDER_virtual/vendor-media-utils = "media-utils"
