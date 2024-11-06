@@ -38,13 +38,6 @@ DOBBY_DEVICESETTINGS_FILE = "dobby.generic.json"
 # Upstream meta-raspberrypi kirkstone branch has "vc4-kms-v3d". Ref RDKVREFPLT-1977
 VC4DTBO = "vc4-fkms-v3d"
 
-# Platform does not have SVP support
-DISTRO_FEATURES:remove = " rdk_svp"
-
-## Move to common middleware configuration when its ready. Refer Comcast Jira: RDK-50625
-# To remove SecAPI dependency.
-DISTRO_FEATURES:append = " enable_icrypto_openssl open-middleware"
-
 # To remove rdkfwupgrade package dependency
 DISTRO_FEATURES:remove = "enable_maintenance_manager ctrlm"
 
