@@ -45,8 +45,26 @@ DISTRO_FEATURES:remove = " rdk_svp"
 # To remove SecAPI dependency.
 DISTRO_FEATURES:append = " enable_icrypto_openssl open-middleware"
 
+#To include ctrlm generic features
+DISTRO_FEATURES:append = " ctrlm_generic"
+
+#Additional flags for voice remote support
+IRDB             = "false"
+AUTH             = "false"
+AUTH_RECEIVER_ID = "false"
+AUTH_DEVICE_ID   = "false"
+AUTH_ACCOUNT_ID  = "false"
+AUTH_PARTNER_ID  = "false"
+AUTH_EXPERIENCE  = "false"
+AUTH_SAT_TOKEN   = "false"
+RF4CE_PACKET_ANALYSIS = "false"
+VOICE_NEXTGEN_MAC = "false"
+
+#To support voice remote 
+DISTRO_FEATURES:remove = "ctrlm_irdb_uei ctrlm_irdb_ruwido ctrlm_mic_tap"
+
 # To remove rdkfwupgrade package dependency
-DISTRO_FEATURES:remove = "enable_maintenance_manager ctrlm"
+DISTRO_FEATURES:remove = "enable_maintenance_manager"
 
 # RDK-52444: Temporarily remove the SECUIRTY_CFLAGS -fstackprotector and fortify source 
 SECURITY_CFLAGS:remove = " -fstack-protector -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Wno-error=format-security -Wno-error=unused-result"
