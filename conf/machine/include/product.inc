@@ -54,3 +54,6 @@ SECURITY_LDFLAGS:remove = " -fstack-protector"
 
 #Setting default build variant as debug.
 BUILD_VARIANT ?= "debug"
+
+# TODO: texttrack is enabled widely. Work-around until that gets fixed.
+DISTRO_FEATURES:remove = " texttrack"
