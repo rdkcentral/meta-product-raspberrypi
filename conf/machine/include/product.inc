@@ -54,3 +54,6 @@ SECURITY_LDFLAGS:remove = " -fstack-protector"
 
 #Setting default build variant as debug.
 BUILD_VARIANT ?= "debug"
+
+#Temporary until RDKVREFPLT-4072 is fixed
+DISTRO_FEATURES:remove = " rdkwindowmanager"
