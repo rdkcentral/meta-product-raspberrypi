@@ -51,3 +51,6 @@ DISTRO_FEATURES:remove = "enable_maintenance_manager ctrlm"
 # RDK-52444: Temporarily remove the SECUIRTY_CFLAGS -fstackprotector and fortify source 
 SECURITY_CFLAGS:remove = " -fstack-protector -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Wno-error=format-security -Wno-error=unused-result"
 SECURITY_LDFLAGS:remove = " -fstack-protector"
+
+#Temporary until RDKVREFPLT-4072 is fixed
+DISTRO_FEATURES:remove = " rdkwindowmanager"
