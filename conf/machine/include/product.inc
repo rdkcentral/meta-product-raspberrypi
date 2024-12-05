@@ -41,6 +41,9 @@ VC4DTBO = "vc4-fkms-v3d"
 # Platform does not have SVP support
 DISTRO_FEATURES:remove = " rdk_svp"
 
+# To remove autostart dependency in rdkservices
+DISTRO_FEATURES:remove = " thunder_startup_services"
+
 ## Move to common middleware configuration when its ready. Refer Comcast Jira: RDK-50625
 # To remove SecAPI dependency.
 DISTRO_FEATURES:append = " enable_icrypto_openssl"
