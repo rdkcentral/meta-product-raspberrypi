@@ -41,9 +41,6 @@ DISTRO_FEATURES:remove = " rdk_svp"
 # To remove SecAPI dependency.
 DISTRO_FEATURES:append = " enable_icrypto_openssl"
 
-# To remove rdkfwupgrade package dependency
-DISTRO_FEATURES:remove = "enable_maintenance_manager"
-
 # RDK-52444: Temporarily remove the SECUIRTY_CFLAGS -fstackprotector and fortify source 
 SECURITY_CFLAGS:remove = " -fstack-protector -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Wno-error=format-security -Wno-error=unused-result"
 SECURITY_LDFLAGS:remove = " -fstack-protector"
