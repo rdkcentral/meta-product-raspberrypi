@@ -50,3 +50,5 @@ SECURITY_LDFLAGS:remove = " -fstack-protector"
 
 #Setting default build variant as debug.
 BUILD_VARIANT ?= "debug"
+
+OPENCDM_DRMS=""
