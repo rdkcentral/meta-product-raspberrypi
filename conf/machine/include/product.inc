@@ -49,4 +49,4 @@ SECURITY_CFLAGS:remove = " -fstack-protector -D_FORTIFY_SOURCE=2 -Wformat -Wform
 SECURITY_LDFLAGS:remove = " -fstack-protector"
 
 #Setting default build variant as debug.
-BUILD_VARIANT ?= "debug"
+#BUILD_VARIANT ?= "debug"
