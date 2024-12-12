@@ -41,9 +41,6 @@ DISTRO_FEATURES:remove = " rdk_svp"
 # To remove SecAPI dependency.
 DISTRO_FEATURES:append = " enable_icrypto_openssl"
 
-# To remove rdkfwupgrade package dependency
-DISTRO_FEATURES:remove = "enable_maintenance_manager"
-
 # RDK-52444: Temporarily remove the SECUIRTY_CFLAGS -fstackprotector and fortify source 
 SECURITY_CFLAGS:remove = " -fstack-protector -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Wno-error=format-security -Wno-error=unused-result"
 SECURITY_LDFLAGS:remove = " -fstack-protector"
@@ -52,3 +49,21 @@ SECURITY_LDFLAGS:remove = " -fstack-protector"
 BUILD_VARIANT ?= "debug"
 
 OPENCDM_DRMS=""
+
+## Logic to add PartnerID for community builds
+insert_partner_id() {
+    mkdir -p ${IMAGE_ROOTFS}/opt/www/authService
+    if [ ! -f "${IMAGE_ROOTFS}/opt/www/authService/partnerId3.dat" ]; then
+        touch ${IMAGE_ROOTFS}/opt/www/authService/partnerId3.dat
+        echo "community" > ${IMAGE_ROOTFS}/opt/www/authService/partnerId3.dat
+    fi
+}
+
+# workaround for bsp complete.ini path
+handle_bsp_complete() {
+    if [ ! -f "${IMAGE_ROOTFS}/opt/bspcomplete.ini" ]; then
+        touch ${IMAGE_ROOTFS}/opt/bspcomplete.ini
+    fi
+}
+
+ROOTFS_POSTPROCESS_COMMAND:append = " insert_partner_id; handle_bsp_complete; "
