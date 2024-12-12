@@ -21,11 +21,7 @@ require conf/multilib.conf
 MULTILIBS = "multilib:lib32"
 DEFAULTTUNE:virtclass-multilib-lib32 = "armv7athf-neon-vfpv4"
 
-# Enable Syslog-ng
-DISTRO_FEATURES:append = " syslog-ng"
-
 # Enabling this to solve syslog-ng packaging issue. Refer RDKCentral jira RDKE-14
-DISTRO_FEATURES:append = " systemd"
 DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
 VIRTUAL-RUNTIME_init_manager = "systemd"
 VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
