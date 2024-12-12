@@ -48,6 +48,8 @@ SECURITY_LDFLAGS:remove = " -fstack-protector"
 #Setting default build variant as debug.
 BUILD_VARIANT ?= "debug"
 
+OPENCDM_DRMS=""
+
 ## Logic to add PartnerID for community builds
 insert_partner_id() {
     mkdir -p ${IMAGE_ROOTFS}/opt/www/authService
@@ -65,4 +67,3 @@ handle_bsp_complete() {
 }
 
 ROOTFS_POSTPROCESS_COMMAND:append = " insert_partner_id; handle_bsp_complete; "
-
