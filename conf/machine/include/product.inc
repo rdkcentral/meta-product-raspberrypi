@@ -21,11 +21,7 @@ require conf/multilib.conf
 MULTILIBS = "multilib:lib32"
 DEFAULTTUNE:virtclass-multilib-lib32 = "armv7athf-neon-vfpv4"
 
-# Enable Syslog-ng
-DISTRO_FEATURES:append = " syslog-ng"
-
 # Enabling this to solve syslog-ng packaging issue. Refer RDKCentral jira RDKE-14
-DISTRO_FEATURES:append = " systemd"
 DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
 VIRTUAL-RUNTIME_init_manager = "systemd"
 VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
@@ -43,10 +39,7 @@ DISTRO_FEATURES:remove = " rdk_svp"
 
 ## Move to common middleware configuration when its ready. Refer Comcast Jira: RDK-50625
 # To remove SecAPI dependency.
-DISTRO_FEATURES:append = " enable_icrypto_openssl open-middleware"
-
-# To remove rdkfwupgrade package dependency
-DISTRO_FEATURES:remove = "enable_maintenance_manager"
+DISTRO_FEATURES:append = " enable_icrypto_openssl"
 
 # RDK-52444: Temporarily remove the SECUIRTY_CFLAGS -fstackprotector and fortify source 
 SECURITY_CFLAGS:remove = " -fstack-protector -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Wno-error=format-security -Wno-error=unused-result"
@@ -54,3 +47,27 @@ SECURITY_LDFLAGS:remove = " -fstack-protector"
 
 #Setting default build variant as debug.
 BUILD_VARIANT ?= "debug"
+
+OPENCDM_DRMS=""
+
+## Logic to add PartnerID for community builds
+insert_partner_id() {
+    mkdir -p ${IMAGE_ROOTFS}/opt/www/authService
+    if [ ! -f "${IMAGE_ROOTFS}/opt/www/authService/partnerId3.dat" ]; then
+        touch ${IMAGE_ROOTFS}/opt/www/authService/partnerId3.dat
+        echo "community" > ${IMAGE_ROOTFS}/opt/www/authService/partnerId3.dat
+    fi
+}
+
+# workaround for bsp complete.ini path
+handle_bsp_complete() {
+    if [ ! -f "${IMAGE_ROOTFS}/opt/bspcomplete.ini" ]; then
+        touch ${IMAGE_ROOTFS}/opt/bspcomplete.ini
+    fi
+}
+
+ROOTFS_POSTPROCESS_COMMAND:append = " insert_partner_id; handle_bsp_complete; "
+
+# Temporary until RDKEMW-746 is fixed
+DISTRO_FEATURES:remove = ' subtec'
+DISTRO_FEATURES:remove = ' texttrack'
