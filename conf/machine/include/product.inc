@@ -68,6 +68,5 @@ handle_bsp_complete() {
 
 ROOTFS_POSTPROCESS_COMMAND:append = " insert_partner_id; handle_bsp_complete; "
 
-# Temporary until RDKEMW-746 is fixed
+# Temporary until subtec is opensourced
 DISTRO_FEATURES:remove = ' subtec'
-DISTRO_FEATURES:remove = ' texttrack'
