@@ -4,6 +4,10 @@ MACHINE = "raspberrypi4-64-rdke"
 TARGET_VENDOR = "-rdk"
 KERNEL_IMAGETYPE= "Image"
 
+#-----------Build related flags
+MACHINE_OEM_NAME = "RaspberryPi4"
+MACHINE_SOC_NAME = "BCM2711"
+
 # To enable serial console
 ENABLE_UART = "1"
 
