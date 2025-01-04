@@ -51,7 +51,7 @@ BUILD_VARIANT ?= "debug"
 OPENCDM_DRMS=""
 
 #Setting default card interface for the device
-DEVICE_DRI_NAME = "/dev/dri/card1"
+DEFAULT_DEVICE = "/dev/dri/card1"
 
 ## Logic to add PartnerID for community builds
 insert_partner_id() {
