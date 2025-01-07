@@ -50,7 +50,7 @@ BUILD_VARIANT ?= "debug"
 
 OPENCDM_DRMS=""
 
-#Setting dri card interface for the device
+# Setting dri card interface for the device
 DRI_DEVICE_NAME = "/dev/dri/card1"
 
 ## Logic to add PartnerID for community builds
