@@ -1,11 +1,17 @@
-ENABLE_HDMI_FORCE_HOTPLUG = "1"
-
 MACHINE = "raspberrypi4-64-rdke"
 TARGET_VENDOR = "-rdk"
 KERNEL_IMAGETYPE= "Image"
 
+## RPi specific boot-config overrides for RDKV Stack.
+ENABLE_HDMI_FORCE_HOTPLUG = "1"
 # To enable serial console
 ENABLE_UART = "1"
+# Upstream meta-raspberrypi kirkstone branch has "vc4-kms-v3d". Ref RDKVREFPLT-1977
+VC4DTBO = "vc4-fkms-v3d"
+# Enable CPU boost for performance, ref: https://meta-raspberrypi.readthedocs.io/en/latest/extra-build-config.html
+RPI_EXTRA_CONFIG = "\n \
+    arm_boost=1\n \
+    "
 
 # This is needed for tmp directory to be named as tmp instead of tmp-glibc
 TCLIBCAPPEND = ""
@@ -31,9 +37,6 @@ DISTRO_FEATURES:append = " rdkshell"
 # Middleware layer requirements.
 DOBBY_DEVICESETTINGS_FILE = "dobby.generic.json"
 
-# Upstream meta-raspberrypi kirkstone branch has "vc4-kms-v3d". Ref RDKVREFPLT-1977
-VC4DTBO = "vc4-fkms-v3d"
-
 # Platform does not have SVP support
 DISTRO_FEATURES:remove = " rdk_svp"
 
@@ -52,24 +55,6 @@ OPENCDM_DRMS=""
 
 # Setting dri card interface for the device
 DRI_DEVICE_NAME = "/dev/dri/card1"
-
-## Logic to add PartnerID for community builds
-insert_partner_id() {
-    mkdir -p ${IMAGE_ROOTFS}/opt/www/authService
-    if [ ! -f "${IMAGE_ROOTFS}/opt/www/authService/partnerId3.dat" ]; then
-        touch ${IMAGE_ROOTFS}/opt/www/authService/partnerId3.dat
-        echo "community" > ${IMAGE_ROOTFS}/opt/www/authService/partnerId3.dat
-    fi
-}
-
-# workaround for bsp complete.ini path
-handle_bsp_complete() {
-    if [ ! -f "${IMAGE_ROOTFS}/opt/bspcomplete.ini" ]; then
-        touch ${IMAGE_ROOTFS}/opt/bspcomplete.ini
-    fi
-}
-
-ROOTFS_POSTPROCESS_COMMAND:append = " insert_partner_id; handle_bsp_complete; "
 
 # Temporary until subtec is opensourced
 DISTRO_FEATURES:remove = ' subtec'
