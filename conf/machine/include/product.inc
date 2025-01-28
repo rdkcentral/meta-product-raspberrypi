@@ -9,7 +9,7 @@ ENABLE_UART = "1"
 # Upstream meta-raspberrypi kirkstone branch has "vc4-kms-v3d". Ref RDKVREFPLT-1977
 VC4DTBO = "vc4-fkms-v3d"
 # Enable CPU boost for performance, ref: https://meta-raspberrypi.readthedocs.io/en/latest/extra-build-config.html
-RPI_EXTRA_CONFIG = "\n \
+RPI_EXTRA_CONFIG += "\n \
     arm_boost=1\n \
     "
 
