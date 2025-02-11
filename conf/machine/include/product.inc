@@ -31,8 +31,8 @@ DEFAULTTUNE:virtclass-multilib-lib32 = "armv7athf-neon-vfpv4"
 DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
 VIRTUAL-RUNTIME_init_manager = "systemd"
 VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
-# This distro is used in westeros recipes
-DISTRO_FEATURES:append = " rdkshell"
+
+DISTRO_FEATURES:append = " rdkshell enable-dab"
 
 # Middleware layer requirements.
 DOBBY_DEVICESETTINGS_FILE = "dobby.generic.json"
