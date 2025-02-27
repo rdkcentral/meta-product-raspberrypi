@@ -23,6 +23,10 @@ TCLIBCAPPEND = ""
 MACHINEOVERRIDES .= ":kirkstone"
 DISTRO_FEATURES:append = " kirkstone"
 
+#Distro to enable cobalt
+DISTRO_FEATURES:append = " cobalt-25"
+DISTRO_FEATURES:append = " enable_cobalt_plugin"
+
 require conf/multilib.conf
 MULTILIBS = "multilib:lib32"
 DEFAULTTUNE:virtclass-multilib-lib32 = "armv7athf-neon-vfpv4"
