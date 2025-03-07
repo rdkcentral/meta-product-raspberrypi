@@ -23,7 +23,7 @@ TCLIBCAPPEND = ""
 MACHINEOVERRIDES .= ":kirkstone"
 DISTRO_FEATURES:append = " kirkstone"
 
-#Distro to enable cobalt
+# Distro to enable cobalt
 DISTRO_FEATURES:append = " cobalt-25"
 DISTRO_FEATURES:append = " enable_cobalt_plugin"
 
