@@ -23,7 +23,7 @@ TCLIBCAPPEND = ""
 MACHINEOVERRIDES .= ":kirkstone"
 DISTRO_FEATURES:append = " kirkstone"
 
-# Distro to enable cobalt
+# TODO: PREMIUMAPP-3209: remove when common config provides these.
 DISTRO_FEATURES:append = " cobalt-25"
 DISTRO_FEATURES:append = " enable_cobalt_plugin"
 
