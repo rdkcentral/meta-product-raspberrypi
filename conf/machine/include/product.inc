@@ -3,15 +3,12 @@ TARGET_VENDOR = "-rdk"
 KERNEL_IMAGETYPE= "Image"
 
 ## RPi specific boot-config overrides for RDKV Stack.
-ENABLE_HDMI_FORCE_HOTPLUG = "1"
 # To enable serial console
 ENABLE_UART = "1"
 # Upstream meta-raspberrypi kirkstone branch has "vc4-kms-v3d". Ref RDKVREFPLT-1977
 VC4DTBO = "vc4-fkms-v3d"
 # Enable CPU boost for performance, ref: https://meta-raspberrypi.readthedocs.io/en/latest/extra-build-config.html
-RPI_EXTRA_CONFIG += "\n \
-    arm_boost=1\n \
-    "
+RPI_EXTRA_CONFIG += "\narm_boost=1\nhdmi_force_hotplug:0=1\nhdmi_force_hotplug:1=0\n"
 
 # This is needed for tmp directory to be named as tmp instead of tmp-glibc
 TCLIBCAPPEND = ""
