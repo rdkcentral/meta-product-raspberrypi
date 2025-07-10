@@ -31,6 +31,7 @@ PREFERRED_PROVIDER_virtual/vendor-gst-drm-plugins = "gst-drm-plugins-rpi"
 PREFERRED_PROVIDER_virtual/vendor-secapi2-adapter = "secapi2-adapter-rpi"
 PREFERRED_PROVIDER_virtual/vendor-systemaudioplatform = "systemaudioplatform"
 PREFERRED_PROVIDER_virtual/vendor-displayinfo-soc = "displayinfo-soc"
+PREFERRED_PROVIDER_virtual/vendor-miracast-soc = "miracast-hal-raspberrypi4"
 
 # Cobalt must be compiled from sources until REFPLTV-2693 is resolved
 PREFERRED_PROVIDER_virtual/cobalt-evergreen = "cobalt-evergreen-src"
