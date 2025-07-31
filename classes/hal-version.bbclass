@@ -49,4 +49,14 @@ python __anonymous () {
 
     #RDK Gstreamer Utils
     parse_hal_version(d, "rdk-gstreamer-utils-headers", "RDK_GSTREAMER")
+
+    # Set default for RDK_GSTREAMER if not found/parsed; check if RDK_GSTREAMER_VER_MAJOR was set by parse_hal_version
+    # Workaround to fix a build error in HALIF v2.0.2: PV was added in rdk-gstreamer-utils-headers.bb instead of rdk-headers-versions.inc
+    # Ref: https://github.com/rdkcentral/meta-rdk-halif-headers/blob/2.0.2/recipes-rdk-headers/rdk-gstreamer-utils/rdk-gstreamer-utils-headers.bb#L7
+    if not d.getVar('RDK_GSTREAMER_VER_MAJOR'):
+        bb.warn("[hal-version.bbclass] RDK Gstreamer Utils version not found, setting default to 1.0.0.0")
+        d.setVar("RDK_GSTREAMER_VER_MAJOR", "1")
+        d.setVar("RDK_GSTREAMER_VER_MINOR", "0")
+        d.setVar("RDK_GSTREAMER_VER_BUILD", "0")
+        d.setVar("RDK_GSTREAMER_VER_ENG", "0")
 }
