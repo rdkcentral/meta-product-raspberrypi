@@ -53,3 +53,7 @@ DRI_DEVICE_NAME = "/dev/dri/card1"
 
 # Temporary until subtec is opensourced
 DISTRO_FEATURES:remove = ' subtec'
+
+# DAC Platform specific configurations
+DAC_BUN_FIRM_COMP_KEY = "1.0.0-b34e9a38a2675d4cd02cf89f7fc72874a4c99eb0-dbg"
+DAC_BUN_PLATNAME_OVERRIDE = "rpi4"
