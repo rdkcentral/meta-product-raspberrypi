@@ -61,3 +61,6 @@ DAC_BUN_PLATNAME_OVERRIDE = "rpi4"
 #Enable vulkan distro
 DISTRO_FEATURES:append = " vulkan"
 DISTRO_FEATURES:append = " vulkan-devtools"
+
+# RDKEVL-6564, RDKECOREMW-826: Temporary till vendor release consumes 1.0.6 release of rdke-common-config
+DISTRO_FEATURES:remove = ' enable_libsoup3'
