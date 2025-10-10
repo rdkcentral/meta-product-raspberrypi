@@ -61,3 +61,6 @@ DAC_BUN_PLATNAME_OVERRIDE = "rpi4"
 #Enable vulkan distro
 DISTRO_FEATURES:append = " vulkan"
 DISTRO_FEATURES:append = " vulkan-devtools"
+
+# RDKECOREMW:936-Workaround to fix wpeframework crash in miracast. To be removed
+IMAGE_CLASSES:append = " remove_miracast_pkugin "
