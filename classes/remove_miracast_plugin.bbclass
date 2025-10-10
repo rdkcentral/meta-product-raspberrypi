@@ -9,3 +9,4 @@ remove_miracast_plugin() {
         rm -f ${IMAGE_ROOTFS}/etc/WPEFramework/plugins/MiracastPlayer.json
     fi
 }
+ROOTFS_POSTPROCESS_COMMAND += "remove_miracast_plugin; "
