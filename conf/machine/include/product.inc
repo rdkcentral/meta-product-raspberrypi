@@ -54,3 +54,5 @@ DAC_BUN_PLATNAME_OVERRIDE = "rpi4"
 #Enable vulkan distro
 DISTRO_FEATURES:append = " vulkan"
 DISTRO_FEATURES:append = " vulkan-devtools"
+
+EXTRA_OECMAKE:append:pn-rdkshell = " -DRDKSHELL_BUILD_FORCE_1080=ON"
