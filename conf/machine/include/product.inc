@@ -54,3 +54,8 @@ DAC_BUN_PLATNAME_OVERRIDE = "rpi4"
 #Enable vulkan distro
 DISTRO_FEATURES:append = " vulkan"
 DISTRO_FEATURES:append = " vulkan-devtools"
+
+# Enable OSS Support Feature
+# This feature allows platform-specific control over OSS feed inclusion in the middleware (MW) layer. Since the MW release repository is shared across multiple device types (e.g., TVs and streaming devices), the OSS feed should only be added for platforms that have migrated to the new OSS consumption model.
+# This distro feature may be removed once the new OSS consumption method is fully adopted across all platforms.
+DISTRO_FEATURES:append = "STACK_LAYER_OSS_SUPPORT"
