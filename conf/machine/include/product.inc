@@ -54,3 +54,9 @@ DAC_BUN_PLATNAME_OVERRIDE = "rpi4"
 #Enable vulkan distro
 DISTRO_FEATURES:append = " vulkan"
 DISTRO_FEATURES:append = " vulkan-devtools"
+
+## RPi specific boot-config overrides for RDKV Stack.
+# To enable serial console
+ENABLE_UART = "1"
+# Upstream meta-raspberrypi kirkstone branch has "vc4-kms-v3d". Ref RDKVREFPLT-1977
+VC4DTBO = "vc4-fkms-v3d"
