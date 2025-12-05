@@ -54,3 +54,6 @@ DAC_BUN_PLATNAME_OVERRIDE = "rpi4"
 #Enable vulkan distro
 DISTRO_FEATURES:append = " vulkan"
 DISTRO_FEATURES:append = " vulkan-devtools"
+
+#Browser memory profile
+BROWSER_MEMORYPROFILE = "uhd"
