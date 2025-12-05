@@ -56,4 +56,4 @@ DISTRO_FEATURES:append = " vulkan"
 DISTRO_FEATURES:append = " vulkan-devtools"
 
 #Browser memory profile
-BROWSER_MEMORYPROFILE = "uhd"
+BROWSER_MEMORYPROFILE = "fhd"
