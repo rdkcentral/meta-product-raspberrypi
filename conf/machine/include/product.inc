@@ -57,3 +57,6 @@ DISTRO_FEATURES:append = " vulkan-devtools"
 
 #Browser memory profile
 BROWSER_MEMORYPROFILE = "fhd"
+
+#To persist resolution after rebooting
+DISTRO_FEATURES:append = " enable_rdkshell_force_1080"
