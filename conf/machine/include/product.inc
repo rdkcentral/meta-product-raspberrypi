@@ -2,8 +2,6 @@ MACHINE = "raspberrypi4-64-rdke"
 TARGET_VENDOR = "-rdk"
 KERNEL_IMAGETYPE= "Image"
 
-# To persist resolution after rebooting
-DISTRO_FEATURES:append = " enable_rdkshell_force_1080"
 
 # This is needed for tmp directory to be named as tmp instead of tmp-glibc
 TCLIBCAPPEND = ""
