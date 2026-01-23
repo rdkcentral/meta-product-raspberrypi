@@ -1,6 +1,7 @@
 MACHINE = "raspberrypi4-64-rdke"
 TARGET_VENDOR = "-rdk"
 KERNEL_IMAGETYPE= "Image"
+SDKVERSION = "RPI4_BSP_kirkstone_arpi14_6.1"
 
 ## RPi specific boot-config overrides for RDKV Stack.
 # To enable serial console
