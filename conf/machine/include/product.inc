@@ -75,3 +75,7 @@ DISTRO_FEATURES:append = " enable_rdkshell_force_1080"
 # This feature allows platform-specific control over OSS feed inclusion in the middleware (MW) layer. Since the MW release repository is shared across multiple device types (e.g., TVs and streaming devices), the OSS feed should only be added for platforms that have migrated to the new OSS consumption model.
 # This distro feature may be removed once the new OSS consumption method is fully adopted across all platforms.
 DISTRO_FEATURES:append = " STACK_LAYER_OSS_SUPPORT"
+
+# TODO: remove this when generic middleware aligns with DAC2.0, Reference: RDKDEV-1194
+DISTRO_FEATURES:append = " community_app_migration"
+DISTRO_FEATURES:remove = " enable_ripple rdkshell offline_apps enable_cobalt_plugin"
