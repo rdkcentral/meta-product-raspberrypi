@@ -22,6 +22,7 @@ TCLIBCAPPEND = ""
 # This override is needed for systemd 2.30 patches to get applied. Refer RDKCentral jira RDKE-12
 MACHINEOVERRIDES .= ":kirkstone"
 DISTRO_FEATURES:append = " kirkstone"
+DISTRO_FEATURES:append = " rdkshell"
 
 require conf/multilib.conf
 MULTILIBS = "multilib:lib32"
