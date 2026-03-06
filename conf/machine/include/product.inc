@@ -77,5 +77,4 @@ DISTRO_FEATURES:append = " enable_rdkshell_force_1080"
 DISTRO_FEATURES:append = " STACK_LAYER_OSS_SUPPORT"
 
 # TODO: remove this when generic middleware aligns with DAC2.0, Reference: RDKDEV-1194
-DISTRO_FEATURES:append = " community_app_migration"
 DISTRO_FEATURES:remove = " enable_ripple rdkshell offline_apps enable_cobalt_plugin"
