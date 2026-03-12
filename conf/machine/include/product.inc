@@ -72,3 +72,6 @@ BROWSER_MEMORYPROFILE = "fhd"
 # This feature allows platform-specific control over OSS feed inclusion in the middleware (MW) layer. Since the MW release repository is shared across multiple device types (e.g., TVs and streaming devices), the OSS feed should only be added for platforms that have migrated to the new OSS consumption model.
 # This distro feature may be removed once the new OSS consumption method is fully adopted across all platforms.
 DISTRO_FEATURES:append = " STACK_LAYER_OSS_SUPPORT"
+
+# Temporarily disable mTLS for telemetry2_0 until client-side mTLS support is available
+CFLAGS:remove:pn-telemetry = "-DENABLE_MTLS"
