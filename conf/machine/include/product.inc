@@ -65,7 +65,8 @@ DAC_APP_PATH = "/opt/dac_apps/apps"
 DAC_APP_CERT_PATH = "/opt/rdk/certs"
 FACTORY_APP_PATH = "/etc/rdk/factoryapps"
 APP_PREINSTALL_DIRECTORY = "/opt/media/apps"
-APP_DOWNLOAD_DIRECTORY = "/opt/CDL"
+# Note: trailing slash is required because the MW package manager concatenates the package name directly.
+APP_DOWNLOAD_DIRECTORY = "/opt/CDL/"
 DEFAULT_APP_STORAGE_PATH = "/opt/persistent/storageManager"
 
 #Enable vulkan distro
