@@ -85,4 +85,4 @@ DISTRO_FEATURES:append = " STACK_LAYER_OSS_SUPPORT"
 CFLAGS:remove:pn-telemetry = "-DENABLE_MTLS"
 
 #version.txt details update
-inherit repo-info
+INHERIT += "repo-info"
