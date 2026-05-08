@@ -83,3 +83,6 @@ DISTRO_FEATURES:append = " STACK_LAYER_OSS_SUPPORT"
 
 # Temporarily disable mTLS for telemetry2_0 until client-side mTLS support is available
 CFLAGS:remove:pn-telemetry = "-DENABLE_MTLS"
+
+#version.txt details update
+INHERIT += "repo-info"
