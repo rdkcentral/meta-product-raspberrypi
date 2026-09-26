@@ -11,7 +11,13 @@ ENABLE_UART = "1"
 VC4DTBO = "vc4-kms-v3d"
 
 # Enable CPU boost for performance, ref: https://meta-raspberrypi.readthedocs.io/en/latest/extra-build-config.html
-RPI_EXTRA_CONFIG += "\narm_boost=1\nhdmi_force_hotplug:0=1\nhdmi_force_hotplug:1=0\n"
+RPI_EXTRA_CONFIG += "\n\
+enable_uart=1\n\
+dtoverlay=pi3-miniuart-bt\n\
+arm_boost=1\n\
+hdmi_force_hotplug:0=1\n\
+hdmi_force_hotplug:1=0\n\
+"
 
 # This is needed for tmp directory to be named as tmp instead of tmp-glibc
 TCLIBCAPPEND = ""
